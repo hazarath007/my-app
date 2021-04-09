@@ -3,7 +3,8 @@ node{
 	git 'https://github.com/javahometech/my-app'  
  }
  stage('Maven Package'){
-	sh 'mvn clean package'
+	 def mvnHome =  tool name: 'maven3', type: 'maven'   
+      sh "${mvnHome}/mvn clean package"
 	sh 'mv target/myweb*.war target/myweb.war'
  }
  
