@@ -37,17 +37,5 @@ node{
    }
 
  }
-stage('E-mail naotification'){
-         mail bcc: '', body: '''job buils status
-         thanks 
-         srinu''', cc: '', from: '', replyTo: '', subject: 'jenkins ci/cd job', to: 'sreenu0377@gmail.com'
-     }
- stage('slack notifications'){
-         slackSend baseUrl: 'https://hooks.slack.com/services/', 
-         channel: '#jenkins-pipeline-demo', 
-         color: 'good',
-         message: 'welcome jenkins pipeline job', 
-         teamDomain: 'jenkins-pipeline-demo',
-         tokenCredentialId: 'slack-demo-1'
-     }
+
 }
