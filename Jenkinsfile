@@ -14,7 +14,8 @@ node{
  
  stage('Push to Docker Hub'){
  
-	 withCredentials([string(credentialsId: 'github-pwd', variable: 'dockerHubPwd')]) {
+	 withCredentials([string(credentialsId: 'dockerHubPwd', variable: 'dockerHubPwd')]) {
+
         sh "docker login -u thotasreenu9 -p ${dockerHubPwd}"
      }
 	 sh 'docker push thotasreenu9/myweb:0.0.1'
