@@ -1,5 +1,5 @@
 node{
- stage('Git Checkout'){
+ stage('checkout'){
 	git 'https://github.com/javahometech/my-app'  
  }
  stage('Maven Package'){
